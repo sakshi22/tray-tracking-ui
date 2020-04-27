@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="400" viewBox="0 0 200 400">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5 {
+        fill: #5856d6;
+      }
+
+      .cls-1, .cls-4 {
+        fill-opacity: 0;
+        stroke-width: 6px;
+      }
+
+      .cls-1, .cls-6 {
+        stroke: #eaeaea;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2, .cls-3, .cls-6 {
+        fill: #eaeaea;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #5856d6;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="99.875" cy="100.625" r="96.625"/>
+  <rect class="cls-2" x="52" y="100" width="85" height="4"/>
+  <path class="cls-3" d="M111.437,76.061l25.9,25-2.778,2.879-25.9-25Z"/>
+  <path id="Rectangle_2_copy" data-name="Rectangle 2 copy" class="cls-3" d="M136.939,103.437l-25,25.9-2.879-2.778,25-25.9Z"/>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-4" cx="99.875" cy="299.625" r="96.625"/>
+  <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-5" d="M52,299h85v5.979H52V299Z"/>
+  <path id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-5" d="M109.7,272.411l-4.221,4.22,26.915,26.914,4.22-4.22Z"/>
+  <path id="Rectangle_1_copy_3" data-name="Rectangle 1 copy 3" class="cls-5" d="M109.7,331.527l-4.221-4.221,26.915-26.914,4.22,4.221Z"/>
+  <path id="Rectangle_1_copy_4" data-name="Rectangle 1 copy 4" class="cls-6" d="M52,99h85v5.979H52V99Z"/>
+  <path id="Rectangle_1_copy_5" data-name="Rectangle 1 copy 5" class="cls-6" d="M109.7,72.411l-4.221,4.221,26.915,26.914,4.22-4.22Z"/>
+  <path id="Rectangle_1_copy_6" data-name="Rectangle 1 copy 6" class="cls-6" d="M109.7,131.527l-4.221-4.221,26.915-26.914,4.22,4.221Z"/>
+</svg>

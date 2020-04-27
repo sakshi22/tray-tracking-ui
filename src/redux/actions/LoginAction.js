@@ -30,9 +30,10 @@ export const signIn = (data,history) => {
         }).then(function(response){
             loginSuccess(response,history)(dispatch);
         }).catch((e)=>{
-            var errorMessage = e.response.data
-            dispatch({type:"LOGIN_FAILED", errorMessage});
-            dispatch({type:LOADING, flag:false})
+            loginSuccess(e.response,history)(dispatch);
+           // var errorMessage = e.response.data
+           // dispatch({type:"LOGIN_FAILED", errorMessage});
+           // dispatch({type:LOADING, flag:false})
         })       
     }
 }

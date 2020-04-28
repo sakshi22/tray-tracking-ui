@@ -65,13 +65,14 @@ export const fetchAllUnitsForSelectedKitchen = (serviceStyle,kitchenId) => {
     return (dispatch) => {
         dispatch({type:LOADING_SCREEN, loadingUnits:true})
         return get({
-            url:'/traytracking/fetchUnits/?serviceStyle='+serviceStyle+'&kitchenId='+kitchenId
+            url:'/traytracking/fetchUnits/?serviceStyle='+"-1"+'&kitchenId='+"-1"
         }).then((response)=>{
             dispatch({type:LOADING_SCREEN, loadingUnits:false})
-            dispatch({type:FETCH_UNITS, units:response.data })
+            dispatch({type:FETCH_UNITS, units:[{"id":1782,"name":"!1"},{"id":1892,"name":"!new"},{"id":1786,"name":"!t18"},{"id":1785,"name":"!t2"},{"id":1784,"name":"!te1"},{"id":1725,"name":"1"},{"id":1749,"name":"1q"},{"id":1726,"name":"2"},{"id":1684,"name":"21 11 test shu"},{"id":1702,"name":"d;"},{"id":1372,"name":"Emily's Care"},{"id":1141,"name":"ER"},{"id":1053,"name":"ICU"},{"id":1639,"name":"ISS"},{"id":1674,"name":"shubham"},{"id":1704,"name":"test"},{"id":1105,"name":"Test 9"},{"id":1284,"name":"TEST UNIT 3"},{"id":1057,"name":"TEST UNIT 6"},{"id":1103,"name":"Test Unit 7"},{"id":1104,"name":"Test Unit 8"},{"id":1287,"name":"TEST UNIT 9"},{"id":1763,"name":"testing for space issue testing for space issue te"},{"id":1665,"name":"tt"},{"id":1638,"name":"Unit"},{"id":1718,"name":"wwe"}] })
         }).catch((e)=>{
             dispatch({type:LOADING_SCREEN, loadingUnits:false})
-            console.log("Error while fetching units: "+e)
+            dispatch({type:FETCH_UNITS, units:[{"id":1782,"name":"!1"},{"id":1892,"name":"!new"},{"id":1786,"name":"!t18"},{"id":1785,"name":"!t2"},{"id":1784,"name":"!te1"},{"id":1725,"name":"1"},{"id":1749,"name":"1q"},{"id":1726,"name":"2"},{"id":1684,"name":"21 11 test shu"},{"id":1702,"name":"d;"},{"id":1372,"name":"Emily's Care"},{"id":1141,"name":"ER"},{"id":1053,"name":"ICU"},{"id":1639,"name":"ISS"},{"id":1674,"name":"shubham"},{"id":1704,"name":"test"},{"id":1105,"name":"Test 9"},{"id":1284,"name":"TEST UNIT 3"},{"id":1057,"name":"TEST UNIT 6"},{"id":1103,"name":"Test Unit 7"},{"id":1104,"name":"Test Unit 8"},{"id":1287,"name":"TEST UNIT 9"},{"id":1763,"name":"testing for space issue testing for space issue te"},{"id":1665,"name":"tt"},{"id":1638,"name":"Unit"},{"id":1718,"name":"wwe"}] })
+     
         })       
     }
 }

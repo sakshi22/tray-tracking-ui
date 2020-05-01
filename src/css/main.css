@@ -101,6 +101,10 @@ h3 {
     z-index: 9999;
     background: rgba(0,0,0,0.7);
 }
+
+.bgBlue{ background: rgb(14,30,66);
+	background: linear-gradient(90deg, rgba(14,30,66,1) 0%, rgba(29,98,171,1) 50%, rgba(14,30,66,1) 100%); height: calc(100vh - 100px); min-height: 100%; float: left;}
+
 .incart-panel-height{
 	height: calc(100vh - 220px) !important; 
 }
@@ -298,7 +302,7 @@ fieldset:hover {
 header {
 	height: 100px;
 	width: 100%;
-	background: #007c94;
+	background: #1f7788;
 	position: fixed;
 	top: 0;
 	z-index: 999;
@@ -360,76 +364,63 @@ header h1 {
 /* cart detail page css code start */
 
 .box-outer {
-	max-width: 968px;
+	max-width:1024px;
 	margin: 0px auto;
 	padding: 30px 0 0 0;
 	text-align: center;
+	width: 100%;
 }
 
 .text-right{
 	text-align: right;
 }
 
-.box-outer-inner {
-	padding: 20px;
-	background-color: #f8f8f8;
-	border: solid 1px #ddd;
-    -webkit-box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.25);	
-}
+.box-outer-inner {	padding: 20px 10px;}
+.box-outer-inner-unit {	padding: 20px; 	margin-top: 20px;	float: right;	width: 100%;}
 
-.box-outer-inner-unit {
-	padding: 20px;
-    background-color: #f8f8f8;
-	border: solid 1px #ddd;
-	margin-top: 20px;
-    float: right;
-    -webkit-box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 37px -16px rgba(0,0,0,0.25);
-}
+.border-bottom{border-top: solid 1px #4a82c1;}
 
 .bg-red,
-.bg-neon,
 .bg-blue,
 .bg-org,
-.bg-green {
+.bg-green,
+.bg-pink{
 	color: #fff;
 	text-align: center;
-	background-color: #4ecec4;
+	background-color: #1763ba;
 	padding: 30px 30px;
 	height: 106px;
-	width: 115px;
-	margin: 9px 5px;
+	width: 124px;
+    margin: 9px 10px;
 	display: inline-block;
 	vertical-align: top;
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.32);
+-moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.32);
+box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.32);
 }
+
+.bg-blue{ margin-left: 0px !important;}
+.bg-pink{ margin-right: 0px !important;}
+.bg-red { background-color: #e81f27;}
+.bg-blue {	background-color: #1763ba;}
+.bg-green { background-color: #21a646;}
+.bg-org {	background-color: #f6682e;}
+.bg-pink {background-color: #ea3e82;}
 
 .bg-red h3,
 .bg-neon h3,
 .bg-blue h3,
 .bg-org h3,
-.bg-green h3 {
+.bg-green h3,
+.bg-pink h3 {
 	line-height: 20px;
-	font-size: 17px;
+	font-size: 15px;
+	font-family: "open_sansregular";
+	
 }
 
-.bg-neon{
-	background-color: #d2647a;
-}
 
-.bg-blue {
-	background-color: #fe9ac9;
-}
-
-.bg-org {
-	background-color: #fea69a;
-}
-
-.bg-green {
-	background-color: #9a9cfe;
-}
 
 .arrow {
 	background: url(../images/arrow.png);
@@ -448,7 +439,8 @@ header h1 {
 .bg-neon:hover,
 .bg-blue:hover,
 .bg-org:hover,
-.bg-green:hover {
+.bg-green:hover,
+.bg-pink:hover {
 	opacity: 0.6;
 	cursor: pointer;
 }
@@ -456,7 +448,8 @@ header h1 {
 .bg-neon:active,
 .bg-blue:active,
 .bg-org:active,
-.bg-green:active {
+.bg-green:active,
+.bg-ping:active {
     opacity: 0.6;
 	cursor: pointer;
 }
@@ -1135,7 +1128,7 @@ height: 437 !important;}
 
 .cart-detail .cart-icon .pull-left,
  .cart-detail .cart-icon .pull-right,
- , .cart-detail .cart-icon .min-deliver-time{	font-family: "open_sansbold"; }
+  .cart-detail .cart-icon .min-deliver-time{	font-family: "open_sansbold"; }
 
 .item-details{ padding: 20px; font-size: 17px;  }
 
@@ -1470,7 +1463,7 @@ height: 437 !important;}
 	header {
 		height: 100px;
 		width: 100%;
-		background: #007c94;
+		background: #1f7788;
 		position: fixed;
 		top: 0;
 		z-index: 999;
@@ -1505,7 +1498,37 @@ height: 437 !important;}
 	}
 
 
+	.bg-red, .bg-blue, .bg-org, .bg-green, .bg-pink {
+		color: #fff;
+		text-align: center;
+		padding: 30px 23px;
+		height: 106px;
+		width: 138px;
+		margin: 9px 10px;
+		display: inline-block;
+		vertical-align: top;
+		border-radius: 15px;
+	}
+
+
 }
+@media only screen and (max-width: 1023px) {
+.box-outer {
+    max-width: 950px;
+    margin: 0px auto;
+    padding: 30px 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+.bg-red, .bg-blue, .bg-org, .bg-green, .bg-pink {
+ 
+    width: 124px;
+    margin: 9px 10px;
+  
+}}
+
 
 @media only screen and (max-width: 768px) {
 	header h1 {
@@ -1518,7 +1541,7 @@ height: 437 !important;}
 	header {
 		height: 100px;
 		width: 100%;
-		background: #007c94;
+		background: #1f7788;
 		position: fixed;
 		height: 70px;
 	}

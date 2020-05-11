@@ -41,7 +41,9 @@ export const fetchAllServiceStylesForSelectedFacility = () => {
             dispatch({type:FETCH_SERVICE_STYLES, serviceStyles:response.data })
             dispatch({type:LOADING_SCREEN, loadingServiceStyles:false})
         }).catch((e)=>{
+            var serviceStyles=[{"id":"ROOM_SERVICE","name":"Room Service"},{"id":"BEDSIDE","name":"Bedside"}]
             console.log("Error while fetching service styles: "+e)
+            dispatch({type:FETCH_SERVICE_STYLES, serviceStyles})
             dispatch({type:LOADING_SCREEN, loadingServiceStyles:false})
         })       
     }
@@ -56,7 +58,9 @@ export const fetchAllKitchensForSelectedFacility = (serviceStyle) => {
             dispatch({type:FETCH_KITCHENS, kitchens:response.data })
             dispatch({type:LOADING_SCREEN, loadingKitchens:false})
         }).catch((e)=>{
+            var kitchens = [{"id":60,"name":"TEST","serviceStyleId":null,"serviceStyleName":null},{"id":131,"name":"Test - Emily","serviceStyleId":null,"serviceStyleName":null},{"id":56,"name":"Test - Erica","serviceStyleId":null,"serviceStyleName":null},{"id":57,"name":"Test Kitchen","serviceStyleId":null,"serviceStyleName":null},{"id":68,"name":"Test Kitchen - Fritha","serviceStyleId":null,"serviceStyleName":null},{"id":180,"name":"test kittie","serviceStyleId":null,"serviceStyleName":null},{"id":138,"name":"WIZARD TEST","serviceStyleId":null,"serviceStyleName":null}]
             console.log("Error while fetching kitchens: "+e)
+            dispatch({type:FETCH_KITCHENS, kitchens})
             dispatch({type:LOADING_SCREEN, loadingKitchens:false})
         })       
     }
@@ -70,6 +74,7 @@ export const fetchAllUnitsForSelectedKitchen = (serviceStyle,kitchenId) => {
             dispatch({type:LOADING_SCREEN, loadingUnits:false})
             dispatch({type:FETCH_UNITS, units:[{"id":1782,"name":"!1"},{"id":1892,"name":"!new"},{"id":1786,"name":"!t18"},{"id":1785,"name":"!t2"},{"id":1784,"name":"!te1"},{"id":1725,"name":"1"},{"id":1749,"name":"1q"},{"id":1726,"name":"2"},{"id":1684,"name":"21 11 test shu"},{"id":1702,"name":"d;"},{"id":1372,"name":"Emily's Care"},{"id":1141,"name":"ER"},{"id":1053,"name":"ICU"},{"id":1639,"name":"ISS"},{"id":1674,"name":"shubham"},{"id":1704,"name":"test"},{"id":1105,"name":"Test 9"},{"id":1284,"name":"TEST UNIT 3"},{"id":1057,"name":"TEST UNIT 6"},{"id":1103,"name":"Test Unit 7"},{"id":1104,"name":"Test Unit 8"},{"id":1287,"name":"TEST UNIT 9"},{"id":1763,"name":"testing for space issue testing for space issue te"},{"id":1665,"name":"tt"},{"id":1638,"name":"Unit"},{"id":1718,"name":"wwe"}] })
         }).catch((e)=>{
+            
             dispatch({type:LOADING_SCREEN, loadingUnits:false})
             dispatch({type:FETCH_UNITS, units:[{"id":1782,"name":"!1"},{"id":1892,"name":"!new"},{"id":1786,"name":"!t18"},{"id":1785,"name":"!t2"},{"id":1784,"name":"!te1"},{"id":1725,"name":"1"},{"id":1749,"name":"1q"},{"id":1726,"name":"2"},{"id":1684,"name":"21 11 test shu"},{"id":1702,"name":"d;"},{"id":1372,"name":"Emily's Care"},{"id":1141,"name":"ER"},{"id":1053,"name":"ICU"},{"id":1639,"name":"ISS"},{"id":1674,"name":"shubham"},{"id":1704,"name":"test"},{"id":1105,"name":"Test 9"},{"id":1284,"name":"TEST UNIT 3"},{"id":1057,"name":"TEST UNIT 6"},{"id":1103,"name":"Test Unit 7"},{"id":1104,"name":"Test Unit 8"},{"id":1287,"name":"TEST UNIT 9"},{"id":1763,"name":"testing for space issue testing for space issue te"},{"id":1665,"name":"tt"},{"id":1638,"name":"Unit"},{"id":1718,"name":"wwe"}] })
      
@@ -87,6 +92,8 @@ export const fetchOutCartOrders = (serviceStyle, kitchenId, unitId, mealNameId, 
             dispatch({type:FILTER_OUT_CART_ORDERS, searchText})
             dispatch({type:LOADING_SCREEN, loadingOutCartMealOrders:false})
         }).catch((e)=>{
+            var outOfCartOrders = [{"id":175762,"patientId":null,"ticketNumber":2,"kitchenId":null,"firstName":null,"lastName":null,"mealPeriodName":null,"unitId":788,"unitName":"TEST UNIT 1","bedId":11157,"bedName":"A","roomId":6579,"roomName":"02","zone":3,"deliveryTime":"12:18 AM","trackingStatus":"TICKET_PRINTED","timeFromDelivery":null,"deliveryDateTime":"2020/05/11 00:18","statusDate":1589195628000,"delivered":false,"nowTray":false,"rushOrder":false,"statusDateInString":"2020/05/11 00:13","eventTime":null,"serviceStyle":null},{"id":175767,"patientId":null,"ticketNumber":11,"kitchenId":null,"firstName":null,"lastName":null,"mealPeriodName":null,"unitId":1373,"unitName":"Emily's Test Unit","bedId":14668,"bedName":"B","roomId":9128,"roomName":"101","zone":2,"deliveryTime":"1:22 AM","trackingStatus":"TICKET_PRINTED","timeFromDelivery":null,"deliveryDateTime":"2020/05/11 01:22","statusDate":1589196918000,"delivered":false,"nowTray":false,"rushOrder":false,"statusDateInString":"2020/05/11 00:35","eventTime":null,"serviceStyle":null}]
+            dispatch({type:FETCH_OUT_CART_ORDERS, outOfCartOrders})
             dispatch({type:LOADING_SCREEN, loadingOutCartMealOrders:false})
             console.log("Error while fetching out cart orders: "+e)
         })       
@@ -106,6 +113,8 @@ export const fetchCarts = () => {
             dispatch({type:LOADING_SCREEN, loadingCarts:false})
             dispatch({type:FETCH_CARTS, responseCarts:response.data})
         }).catch((e) => {
+            var responseCarts=[{"id":1682,"status":"IN_PROGRESS","zone":2,"mealOrders":[{"id":175766,"patientId":null,"ticketNumber":10,"kitchenId":56,"firstName":null,"lastName":null,"mealPeriodName":null,"unitId":1373,"unitName":"Emily's Test Unit","bedId":14668,"bedName":"B","roomId":9128,"roomName":"101","zone":2,"deliveryTime":"1:22 AM","trackingStatus":"INCART","timeFromDelivery":null,"deliveryDateTime":"2020/05/11 01:22","statusDate":1589196986000,"delivered":false,"nowTray":false,"rushOrder":false,"statusDateInString":"2020/05/11 00:36","eventTime":null,"serviceStyle":"BEDSIDE"},{"id":175765,"patientId":null,"ticketNumber":9,"kitchenId":56,"firstName":null,"lastName":null,"mealPeriodName":null,"unitId":1373,"unitName":"Emily's Test Unit","bedId":14668,"bedName":"B","roomId":9128,"roomName":"101","zone":2,"deliveryTime":"1:22 AM","trackingStatus":"INCART","timeFromDelivery":null,"deliveryDateTime":"2020/05/11 01:22","statusDate":1589196984000,"delivered":false,"nowTray":false,"rushOrder":false,"statusDateInString":"2020/05/11 00:36","eventTime":null,"serviceStyle":"BEDSIDE"}],"mealOrderId":null,"firstMealOrderTime":"3","minimumDeliveryTime":"1:22 AM"},{"id":1681,"status":"IN_PROGRESS","zone":3,"mealOrders":[{"id":175764,"patientId":null,"ticketNumber":8,"kitchenId":56,"firstName":null,"lastName":null,"mealPeriodName":null,"unitId":1373,"unitName":"Emily's Test Unit","bedId":14668,"bedName":"B","roomId":9128,"roomName":"101","zone":2,"deliveryTime":"1:22 AM","trackingStatus":"INCART","timeFromDelivery":null,"deliveryDateTime":"2020/05/11 01:22","statusDate":1589196980000,"delivered":false,"nowTray":false,"rushOrder":false,"statusDateInString":"2020/05/11 00:36","eventTime":null,"serviceStyle":"BEDSIDE"}],"mealOrderId":null,"firstMealOrderTime":"3","minimumDeliveryTime":"1:22 AM"}]
+            dispatch({type:FETCH_CARTS, responseCarts})
             dispatch({type:LOADING_SCREEN, loadingCarts:false})
             console.log("Error while fetching in progress carts: "+e)
         })             
@@ -263,7 +272,9 @@ export const fetchFacilityMealNameArrayForSelectedFacility = () =>
             dispatch({type:LOADING_SCREEN, loadingMealNames:false})
             dispatch({type:FETCH_FACILITY_MEAL_NAMES, facilityMealNameArray:response.data})
         }).catch((e) => {
+            var facilityMealNameArray =  [{"mealNameId":1,"name":"Daily Breakfast"},{"mealNameId":3,"name":"Daily Lunch"},{"mealNameId":5,"name":"Daily Dinner"}]
             dispatch({type:LOADING_SCREEN, loadingMealNames:false})
+            dispatch({type:FETCH_FACILITY_MEAL_NAMES, facilityMealNameArray})
             console.log("Error while fetching meal names for facility: "+e)
         })             
     }

@@ -103,7 +103,7 @@ h3 {
 }
 
 .bgBlue{ background: rgb(14,30,66);
-	background: linear-gradient(90deg, rgba(14,30,66,1) 0%, rgba(29,98,171,1) 50%, rgba(14,30,66,1) 100%); height: calc(100vh - 100px); min-height: 100%; float: left;}
+	background: linear-gradient(90deg, rgba(14,30,66,1) 0%, rgba(21,60,101,1) 50%, rgba(14,30,66,1) 100%); height: calc(100vh - 100px); min-height: 100%; float: left;}
 
 .incart-panel-height{
 	height: calc(100vh - 220px) !important; 
@@ -151,7 +151,7 @@ input[type=number]::-webkit-inner-spin-button {
 	position: absolute !important;}
 
 .unit-list-undo{
-	margin-top:95px !important;
+	margin-top:80px !important;
 	background:#24a299 !important;
 }
 .unit-list {
@@ -334,13 +334,20 @@ header h1 {
 
 }
 
-.dropdown {
-	float: right;
-	width: 340px;
-	position: relative;
-	top: -82px;
+.main-page-header h1{
+	letter-spacing: 2px !important;
 }
 
+.dropdown {
+	float: right;
+	width: 363px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+}
+.username {
+	text-overflow: unset !important;
+}
 .dropdown_Icon {
 	color: #fff !important;
 	float: right;
@@ -348,7 +355,7 @@ header h1 {
 
 
 .selected-facility-name{
-	max-width: 260px;
+	max-width: 285px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -821,12 +828,11 @@ height: 437 !important;}
 .unit_tile_text{
 	font-family: "open_sansbold";
     padding: 5px 0;
-    display: table-cell;
+    display: flex;
     width: 190px;
     height: 110px;
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
 }
 .ticket-footer-text{
 	margin-top: 6px;
@@ -1161,14 +1167,14 @@ height: 437 !important;}
 
 .undo-unit-name {
 	font-family: "open_sansbold";
-	justify-content: center;
 	display: flex;
-    width: 93%;
+    width: 100%;
     height: 73px;
     text-align: center;
     position: absolute;
     top: 10px;
-    align-items: center;
+	align-items: center;
+	justify-content: center;
 }
 	svg.plus-icon{    position: absolute;
 		right: 39px;
@@ -1378,11 +1384,11 @@ height: 437 !important;}
 	}
 
 	.logo-margin-left {
-		margin-left: 42px !important;
+		margin-left: 30px !important;
 	 }
 	  
 	  .header-margin-left {
-		margin-left: 42px !important;
+		margin-left: 30px !important;
 	 }
 
 	.ticket-footer-text {
@@ -1435,7 +1441,7 @@ height: 437 !important;}
 		width: 205px !important;
 	}
 	.sort-by-filter-small{
-		width: 165px !important;
+		width: 169px !important;
 	}
 	.refresh-button {
 		font-size: 13px;
